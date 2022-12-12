@@ -81,8 +81,8 @@ It contains 65 labels:
 - `T5-parachains`: *This PR/Issue is related to Parachains.*
 - `T6-XCM`: *This PR/Issue is related to XCM.*
 - `T7-statemint`: *This PR/Issue is related to Statemint*
-- `T7-substrate`: *This is an issue that needs to be implemented upstream in Substrate.*
-- `T8-CGP`: *This PR/Issue is related to Common Good Parachains.*
+- `T8-substrate`: *This is an issue that needs to be implemented upstream in Substrate.*
+- `T9-CGP`: *This PR/Issue is related to Common Good Parachains.*
 
 ### U labels: Urgency - in what time manner does this issue need to be resolved?
 - `U0-drop_everything`: *Everyone should address the issue now.*
