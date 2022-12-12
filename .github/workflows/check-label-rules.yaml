@@ -1,9 +1,7 @@
 name: Check label Rules
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
 
 jobs:
   check-label-rules:
