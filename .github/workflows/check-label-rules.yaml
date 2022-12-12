@@ -25,4 +25,4 @@ jobs:
           MOUNT: /work
           RULES_PATH: ruled_labels
         run: |
-          docker run --rm -i -v $PWD/${RULES_PATH}/:$MOUNT $IMAGE test ${MOUNT}/tests_cumulus.yaml
+          docker run --rm -i -v $PWD/${RULES_PATH}/:$MOUNT $IMAGE test -s ${MOUNT}/specs_cumulus.yaml ${MOUNT}/tests_cumulus.yaml
