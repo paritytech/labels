@@ -150,30 +150,39 @@ labels:
   - name: S4-blocked
     description: "Issue is blocked, see comments for further information."
     color: "122381"
+  - name: T0-node
+    description: This PR/Issue is related to the topic “node”.
+    color: fbffe0
+  - name: T1-runtime
+    description: This PR/Issue is related to the topic “runtime”.
+    color: F5FCE6
+  - name: T2-API
+    description: This PR/Issue is related to APIs.
+    color: 009B40
   - name: T3-relay_chain
-    description: This PR/Issue is related to the relay chain.
+    description: This PR/Issue is related to the Relay Chain.
     color: ffeeee
   - name: T4-smart_contracts
     description: This PR/Issue is related to smart contracts.
     color: 0C7BAD
   - name: T5-parachains
-    description: This PR/Issue is related to Parachains.
+    description: This PR/Issue is related to parachains.
     color: 0052cc
-  - name: T10-release
-    description: This PR/Issue is related to topics touching the release notes.
-    color: 0052cc
-  - name: T7-statemint
-    description: This PR/Issue is related to Statemint
-    color: 86e62a
-  - name: T8-CGP
-    description: This PR/Issue is related to Common Good Parachains.
-    color: BFDADC
   - name: T6-XCM
     description: This PR/Issue is related to XCM.
     color: d4c5f9
-  - name: T9-substrate
+  - name: T7-substrate
     description: This is an issue that needs to be implemented upstream in Substrate.
-    color: 1d76db
+    color: 86e62a
+  - name: T8-system_parachains
+    description: This PR/Issue is related to System Parachains.
+    color: BFDADC
+  - name: T9-bridges
+    description: This PR/Issue is related to bridges.
+    color: BFDADC
+  - name: T10-release
+    description: This PR/Issue is related to topics touching the release notes.
+    color: 0052cc
   - name: U0-drop_everything
     description: Everyone should address the issue now.
     color: "5319e7"
@@ -189,15 +198,6 @@ labels:
   - name: U4-some_day_maybe
     description: Issue might be worth doing eventually.
     color: fffbed
-  - name: T0-node
-    description: This PR/Issue is related to the topic “node”.
-    color: fbffe0
-  - name: T1-runtime
-    description: This PR/Issue is related to the topic “runtime”.
-    color: F5FCE6
-  - name: T2-API
-    description: This PR/Issue is related to APIs.
-    color: 009B40
 
 rules:
   - name: Require a single Release (B) label
