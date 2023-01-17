@@ -213,12 +213,12 @@ rules:
       when: !one_of [B1]
       require: !one_of [C*]
 
-  - name: Release mentions need a topic (T)
+  - name: Release mentions need one or more topic(s) (T)
     id: require_one_t_when_b1
     tags: [PR]
     spec:
       when: !one_of [B1]
-      require: !one_of [T*]
+      require: !some_of [T*]
 
   - name: One single issue status (S) label allowed
     id: single_s

@@ -32,6 +32,18 @@ specs:
     labels: [ B1, D1 ]
     expected: false
 
+  - name: Pass - Release accept one T label
+    filter:
+      id: [ accept_one_t_when_b1 ]
+    labels: [ B1, D1, T1 ]
+    expected: true
+
+  - name: Pass - Release accept multiple T labels
+    filter:
+      id: [ accept_multiple_t_when_b1 ]
+    labels: [ B1, D1, T1, T2 ]
+    expected: true
+
   - name: Fail - Only one criticality label allowed
     filter:
       id: [ single_c ]
