@@ -163,10 +163,10 @@ labels:
     description: Work is currently on hold, see comments for further information.
     color: "122381"
   - name: T0-node
-    description: This PR/Issue is related to the topic “node”. When in combination with B1 will be shown in the release note Client section.
+    description: This PR/Issue is related to the topic “node”.
     color: fbffe0
   - name: T1-runtime
-    description: This PR/Issue is related to the topic “runtime”. When in combination with B1 will be shown in the release note Runtime section.
+    description: This PR/Issue is related to the topic “runtime”.
     color: F5FCE6
   - name: T2-API
     description: This PR/Issue is related to APIs.
@@ -204,12 +204,6 @@ labels:
   - name: U4-some_day_maybe
     description: Issue might be worth doing eventually.
     color: d2d1d3
-  - name: Z0-unconfirmed
-    description: ~
-    color: dedcd8
-  - name: Z1-question
-    description: ~
-    color: fff5fb
 
 rules:
   - name: Require a single Release (B) label
