@@ -228,7 +228,7 @@ rules:
     tags: [PR]
     spec:
       when: !one_of [B1]
-      require: !some_of [T*]      
+      require: !some_of [T*]
 
   - name: One single issue status (S) label allowed
     id: single_s

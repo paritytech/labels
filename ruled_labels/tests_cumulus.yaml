@@ -13,8 +13,8 @@ specs:
       id: [ single_b ]
     labels: [ A1 ]
     expected: false
-    
-   - name: Pass - Release label provided.
+
+  - name: Pass - Release label provided.
     filter:
       id: [ release_notes ]
     labels: [ A1, B0 ]
@@ -37,7 +37,7 @@ specs:
       id: [ require_t0_or_t1_when_b1 ]
     labels: [ B1, D1 ]
     expected: false
-    
+
   - name: Pass - Release has a topic.
     filter:
       id: [ require_t0_or_t1_when_b1 ]
@@ -55,7 +55,7 @@ specs:
       id: [ single_c ]
     labels: [ B1, C1, C3 ]
     expected: false
-    
+
   - name: Fail - Only one urgency label allowed
     filter:
       id: [ single_u ]
