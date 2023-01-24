@@ -56,7 +56,7 @@ specs:
     labels: [ B1, C1, C3 ]
     expected: false
     
-    - name: Fail - Only one urgency label allowed
+  - name: Fail - Only one urgency label allowed
     filter:
       id: [ single_u ]
     labels: [ B1, U1, U3 ]
