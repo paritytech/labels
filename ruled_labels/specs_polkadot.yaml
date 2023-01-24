@@ -108,16 +108,16 @@ labels:
   - name: I6-benchmarks
     description: Benchmarks need fixing, improving or augmenting.
     color: f3a603
-  - name: I6-documentation
+  - name: I7-documentation
     description: Documentation needs fixing, improving or augmenting.
     color: fbca04
-  - name: I7-refactor
+  - name: I8-refactor
     description: Code needs refactoring.
     color: dbea04
-  - name: I8-footprint
+  - name: I9-footprint
     description: An enhancement to provide a smaller (system load, memory, network or disk) footprint.
     color: 34C302
-  - name: I9-optimisation
+  - name: I10-optimisation
     description: An enhancement to provide better overall performance in terms of time-to-completion for a task.
     color: 009B40
   - name: J0-enhancement
@@ -231,7 +231,7 @@ rules:
     tags: [PR]
     spec:
       when: !one_of [B1]
-      require: !some_of [T*]      
+      require: !some_of [T*]
 
   - name: One single issue status (S) label allowed
     id: single_s

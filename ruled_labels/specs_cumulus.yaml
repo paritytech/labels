@@ -72,6 +72,9 @@ labels:
   - name: E4-node_first_update
     description: This is a runtime change that will require all nodes to be update BEFORE the runtime upgrade.
     color: e8d7d7
+  - name: E5-needs_substrate_pr
+    description: This is an issue that needs to be implemented upstream in Substrate.
+    color: e8d7d8
   - name: F0-breaks_everything
     description: "This change breaks the underlying networking, sync or related and thus will cause a fork."
     color: bdadad
@@ -102,16 +105,19 @@ labels:
   - name: I5-tests
     description: "Tests need fixing, improving or augmenting."
     color: 6C9C98
-  - name: I6-documentation
+  - name: I6-benchmarks
+    description: Benchmarks need fixing, improving or augmenting.
+    color: f3a603
+  - name: I7-documentation
     description: "Documentation needs fixing, improving or augmenting."
     color: f48a75
-  - name: I7-refactor
+  - name: I8-refactor
     description: Code needs refactoring.
     color: 0075ca
-  - name: I8-footprint
+  - name: I9-footprint
     description: "An enhancement to provide a smaller (system load, memory, network or disk) footprint."
     color: "000000"
-  - name: I9-optimisation
+  - name: I10-optimisation
     description: An enhancement to provide better overall performance in terms of time-to-completion for a task.
     color: c5def5
   - name: J0-enhancement
@@ -171,16 +177,13 @@ labels:
   - name: T6-XCM
     description: This PR/Issue is related to XCM.
     color: d4c5f9
-  - name: T7-substrate
-    description: This is an issue that needs to be implemented upstream in Substrate.
-    color: 86e62a
-  - name: T8-system_parachains
+  - name: T7-system_parachains
     description: This PR/Issue is related to System Parachains.
     color: BFDADC
-  - name: T9-bridges
+  - name: T8-bridges
     description: This PR/Issue is related to bridges.
     color: BFDADC
-  - name: T10-release
+  - name: T9-release
     description: This PR/Issue is related to topics touching the release notes.
     color: 0052cc
   - name: U0-drop_everything
@@ -213,8 +216,15 @@ rules:
       when: !one_of [B1]
       require: !one_of [C*]
 
-  - name: Release mentions need one or more topic(s) (T)
-    id: require_one_t_when_b1
+  - name: Release mentions need a topic "node" or "runtime"
+    id: require_t0_or_t1_when_b1
+    tags: [PR]
+    spec:
+      when: !one_of [B1]
+      require: !one_of [T0, T1]
+
+  - name: Release mentions can have several topics
+    id: allow_multiple_t_when_b1
     tags: [PR]
     spec:
       when: !one_of [B1]
