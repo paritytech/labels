@@ -22,11 +22,8 @@ It contains 68 labels:
 - `C9-critical`: *PR touches the given topic and has a critical impact on builders.*
 
 ### D labels: Auditing labels.
-For `polkadot` these labels are required if there were changes in these paths:
-'^runtime/polkadot'
-'^runtime/kusama'
-'^primitives/src/'
-'^runtime/common'
+These labels are required if there were changes in these paths:
+`^runtime/polkadot`, `^runtime/kusama`, `^primitives/src/`, `^runtime/common`
 
 - `D1-audited 👍`: *PR contains changes to critical logic that has been properly reviewed and externally audited.*
 - `D2-notlive 💤`: *PR contains changes in a runtime directory that is not deployed to a chain that requires an audit.*
