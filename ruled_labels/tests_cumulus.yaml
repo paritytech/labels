@@ -13,6 +13,12 @@ specs:
       id: [ single_b ]
     labels: [ A1 ]
     expected: false
+    
+   - name: Pass - Release label provided.
+    filter:
+      id: [ release_notes ]
+    labels: [ A1, B0 ]
+    expected: true
 
   - name: Fail - Only one audit label allowed
     filter:
@@ -20,32 +26,44 @@ specs:
     labels: [ D1, B1, D4 ]
     expected: false
 
-  - name: Fail - Release need criticality
+  - name: Fail - Release needs criticality
     filter:
       id: [ require_one_c_when_b1 ]
     labels: [ B1, T1, D1 ]
     expected: false
 
-  - name: Fail - Release require one T topics
+  - name: Fail - Release need a topic.
     filter:
-      id: [ require_one_t_when_b1 ]
+      id: [ require_t0_or_t1_when_b1 ]
     labels: [ B1, D1 ]
     expected: false
-
-  - name: Pass - Release accept one T label
+    
+  - name: Pass - Release has a topic.
     filter:
-      id: [ accept_one_t_when_b1 ]
-    labels: [ B1, D1, T1 ]
+      id: [ require_t0_or_t1_when_b1 ]
+    labels: [ B1, D1, T0 ]
     expected: true
 
-  - name: Pass - Release accept multiple T labels
+  - name: Pass - PR has multiple topics
     filter:
-      id: [ accept_multiple_t_when_b1 ]
-    labels: [ B1, D1, T1, T2 ]
+      id: [ allow_multiple_t_when_b1 ]
+    labels: [ B1, T0, T7, D1 ]
     expected: true
 
   - name: Fail - Only one criticality label allowed
     filter:
       id: [ single_c ]
     labels: [ B1, C1, C3 ]
+    expected: false
+    
+    - name: Fail - Only one urgency label allowed
+    filter:
+      id: [ single_u ]
+    labels: [ B1, U1, U3 ]
+    expected: false
+
+  - name: Fail - Only one status label allowed
+    filter:
+      id: [ single_s ]
+    labels: [ B1, S1, S3 ]
     expected: false
