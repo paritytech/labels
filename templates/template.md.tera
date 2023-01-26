@@ -1,0 +1,47 @@
+# Label Documentation for the repo `{{ name }}`
+
+This is the documenation for `{{ name }}` version `v{{ version }}`.
+
+It contains `{{ labels | length }}` labels and `{{ rules | length }}` rules.
+
+## Description
+
+{{ description }}
+
+## Rules
+
+{% for rule in rules -%}
+<!-- {{rule.id}} -->
+- `{{ rule.name }}`
+
+{%- if rule.disabled -%}
+⚠️ This rule is DISABLED.
+{%- endif -%}
+
+{%- if rule.description -%}
+{{ rule.description }}
+{%- endif -%}
+
+{%- if rule.spec %}
+{%- if rule.spec.when %}
+  - when: {{ rule.spec.when|json_encode() }}
+{%- endif %}
+
+{%- if rule.spec.require %}
+  - require: {{ rule.spec.require|json_encode() }}
+{%- endif %}
+{%- endif %}
+
+{% endfor -%}
+
+{% if rule.spec.exclude %}
+- Exclude:
+{% for pat in rule.spec.exclude %}
+  - {{ pat }}
+{%- endfor %}{% endif %}
+
+## Labels
+
+{% for label in labels | sort(attribute="name") -%}
+- `{{ label.name }}`: {{ label.description }}
+{% endfor %}
