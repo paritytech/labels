@@ -2,6 +2,7 @@
 name: paritytech/polkadot
 description: Import from paritytech/polkadot
 version: 0.0.1
+codes: []
 labels:
   - name: A0-please_review
     description: Pull request needs code review.
