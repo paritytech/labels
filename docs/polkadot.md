@@ -1,6 +1,6 @@
 # Label Documentation for the repo `paritytech/polkadot`
 
-This document is based on commit `ef802226` and was last updated on `2023-01-26T18:41:00Z`.
+This document is based on commit `b6e67246` and was last updated on `2023-01-26T18:43:40Z`.
 
 ## Description
 
