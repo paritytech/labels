@@ -4,8 +4,12 @@ on:
   pull_request:
 
 jobs:
-  prepare:
+  check-label-rules:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo: [cumulus, polkadot]
+
     steps:
       - name: Checkout sources
         uses: actions/checkout@v3
@@ -19,14 +23,6 @@ jobs:
           IMAGE: paritytech/ruled_labels:0.4.0
         run: docker pull $IMAGE
 
-  check-label-rules:
-    runs-on: ubuntu-latest
-    needs: prepare
-    strategy:
-      matrix:
-        repo: [cumulus, polkadot]
-
-    steps:
       - name: Check label Rules for ${{ matrix.repo }}
         env:
           IMAGE: paritytech/ruled_labels:0.4.0
