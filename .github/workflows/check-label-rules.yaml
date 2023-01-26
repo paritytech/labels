@@ -1,11 +1,18 @@
-name: Check label Rules Cumulus
+name: Check label Rules
 
 on:
   pull_request:
 
+env:
+  IMAGE: paritytech/ruled_labels:0.4.0
+
 jobs:
   check-label-rules:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo: [cumulus, polkadot]
+
     steps:
       - name: Checkout sources
         uses: actions/checkout@v3
@@ -15,15 +22,11 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
 
       - name: Pull image
-        env:
-          IMAGE: paritytech/ruled_labels:0.4.0
         run: docker pull $IMAGE
 
-      - name: Check label Rules
+      - name: Check label Rules for ${{ matrix.repo }}
         env:
-          IMAGE: paritytech/ruled_labels:0.4.0
           MOUNT: /work
           RULES_PATH: ruled_labels
         run: |
-          docker run --rm -i -v $PWD/${RULES_PATH}/:$MOUNT $IMAGE test -s ${MOUNT}/specs_cumulus.yaml ${MOUNT}/tests_cumulus.yaml
-          docker run --rm -i -v $PWD/${RULES_PATH}/:$MOUNT $IMAGE test -s ${MOUNT}/specs_polkadot.yaml ${MOUNT}/tests_polkadot.yaml
+          docker run --rm -i -v $PWD/${RULES_PATH}/:$MOUNT $IMAGE test -s ${MOUNT}/specs_${{ matrix.repo }}.yaml ${MOUNT}/tests_${{ matrix.repo }}.yaml
