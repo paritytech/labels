@@ -1,10 +1,11 @@
 # Label Documentation for the repo `paritytech/cumulus`
 
-This is the documenation for `paritytech/cumulus` version `v0.0.1`.
-
-It contains `66` labels and `8` rules.
+This document is based on commit `eade49f3` and was last updated on `2023-01-26T18:43:52Z`.
 
 ## Description
+
+This is the documentation for `paritytech/cumulus` version `v0.0.1`.
+It contains `66` labels and `8` rules.
 
 Import from paritytech/cumulus
 
