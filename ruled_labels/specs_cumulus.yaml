@@ -2,6 +2,17 @@
 name: paritytech/cumulus
 description: Import from paritytech/cumulus
 version: 0.0.1
+codes:
+  - code: A
+    name: Action labels
+    description: used with GHA and trigger a certain process
+  - code: B
+    name: Release note labels
+    description: to be used in combination with a T* label
+  - code: C
+    name: Criticality
+    description: how critical is this change? Which impact does it have on the builders? To be used in combination with a T* label
+
 labels:
   - name: A0-please_review
     description: Pull request needs code review.

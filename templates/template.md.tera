@@ -42,6 +42,16 @@ It contains `{{ labels | length }}` labels and `{{ rules | length }}` rules.
 
 ## Labels
 
+{%- set_global current_code = '' -%}
 {% for label in labels | sort(attribute="name") -%}
+
+{%- set code = label.name | truncate(length=1, end="") -%}
+{%- if code != current_code -%}
+{%- set_global current_code = code -%}
+{% for c in codes | filter(attribute="code", value=code) %}
+### `{{ c.code }}` - {{ c.name }}: {{c.description}}
+{% endfor %}
+{%- endif -%}
+
 - `{{ label.name }}`: {{ label.description }}
 {% endfor %}
