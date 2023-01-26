@@ -1,10 +1,11 @@
 # Label Documentation for the repo `{{ name }}`
 
-This is the documenation for `{{ name }}` version `v{{ version }}`.
-
-It contains `{{ labels | length }}` labels and `{{ rules | length }}` rules.
+This document is based on commit `{{ env.COMMIT | truncate(length=8, end="")}}` and was last updated on `{{ env.DATE }}`.
 
 ## Description
+
+This is the documentation for `{{ name }}` version `v{{ version }}`.
+It contains `{{ labels | length }}` labels and `{{ rules | length }}` rules.
 
 {{ description }}
 

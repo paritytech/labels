@@ -39,5 +39,5 @@ jobs:
           git config --global push.default current
           git add ./docs
           git pull
-          git commit ./docs -m "Update label documentation"
+          git commit ./docs -m "Update label documentation" || true
           git push
