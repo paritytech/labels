@@ -3,6 +3,9 @@ name: Check label Rules Cumulus
 on:
   pull_request:
 
+env:
+  IMAGE: paritytech/ruled_labels:0.4.0
+
 jobs:
   check-label-rules:
     runs-on: ubuntu-latest
@@ -19,13 +22,10 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
 
       - name: Pull image
-        env:
-          IMAGE: paritytech/ruled_labels:0.4.0
         run: docker pull $IMAGE
 
       - name: Check label Rules for ${{ matrix.repo }}
         env:
-          IMAGE: paritytech/ruled_labels:0.4.0
           MOUNT: /work
           RULES_PATH: ruled_labels
         run: |
