@@ -50,9 +50,7 @@ Import from paritytech/polkadot
 
 
 
-## Labels
-
-- `A0-please_review`: Pull request needs code review.
+## Labels- `A0-please_review`: Pull request needs code review.
 - `A1-needs_burnin`: Pull request needs to be tested on a live validator node before merge. DevOps is notified via matrix
 - `A2-insubstantial`: Pull request requires no code review (e.g., a sub-repository hash update).
 - `A3-in_progress`: Pull request is in progress. No review needed at this stage.
