@@ -1,6 +1,9 @@
 # Label Documentation for the repo `paritytech/cumulus`
 
-This document is based on commit `eade49f3` and was last updated on `2023-01-26T18:43:52Z`.
+This document is generated automatically based on commit `b7912f2c` and was last updated on `2023-01-26T18:59:07Z`.
+
+The source data can be found in the [`ruled_labels`](../ruled_labels) folder of the repository. Those rules are processed by
+[ruled_labels](https://github.com/paritytech/ruled_labels) and **all** rules must be satisfied.
 
 ## Description
 
@@ -52,7 +55,7 @@ Import from paritytech/cumulus
 
 
 ## Labels
-### `A` - Action labels: used with GHA and trigger a certain process
+### `A␣` - Action labels: used with GHA and trigger a certain process
 - `A0-please_review`: Pull request needs code review.
 - `A1-needs_burnin`: Pull request needs to be tested on a live validator node before merge. DevOps is notified via matrix
 - `A2-insubstantial`: Pull request requires no code review (e.g., a sub-repository hash update).
@@ -61,11 +64,11 @@ Import from paritytech/cumulus
 - `A5-stale`: Pull request did not receive any updates in a long time. No review needed at this stage. Close it.
 - `A6-backport`: Pull request is already reviewed well in another branch.
 
-### `B` - Release note labels: to be used in combination with a T* label
+### `B␣` - Release note labels: to be used in combination with a T* label
 - `B0-silent`: Changes should not be mentioned in any release notes
 - `B1-note_worthy`: Changes should be noted in the release notes
 
-### `C` - Criticality: how critical is this change? Which impact does it have on the builders? To be used in combination with a T* label
+### `C␣` - Criticality: how critical is this change? Which impact does it have on the builders? To be used in combination with a T* label
 - `C1-low`: PR touches the given topic and has a low impact on builders.
 - `C3-medium`: PR touches the given topic and has a medium impact on builders..
 - `C5-high`: PR touches the given topic and has a high impact on builders.
