@@ -1,4 +1,4 @@
-name: Check label Rules Cumulus
+name: Check label Rules
 
 on:
   pull_request:
