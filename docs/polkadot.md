@@ -1,10 +1,11 @@
 # Label Documentation for the repo `paritytech/polkadot`
 
-This is the documenation for `paritytech/polkadot` version `v0.0.1`.
-
-It contains `67` labels and `8` rules.
+This document is based on commit `ef802226` and was last updated on `2023-01-26T18:41:00Z`.
 
 ## Description
+
+This is the documentation for `paritytech/polkadot` version `v0.0.1`.
+It contains `67` labels and `8` rules.
 
 Import from paritytech/polkadot
 
