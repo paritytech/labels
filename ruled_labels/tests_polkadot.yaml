@@ -34,20 +34,32 @@ specs:
   
   - name: Fail - Release need a topic.
     filter:
-      id: [ require_t0_or_t1_when_b1 ]
+      id: [ require_t_when_b1 ]
     labels: [ B1, D1 ]
     expected: false
   
-  - name: Pass - Release has a topic.
+  - name: Pass - Release has T0 as topic.
     filter:
-      id: [ require_t0_or_t1_when_b1 ]
+      id: [ require_t_when_b1 ]
     labels: [ B1, D1, T0 ]
+    expected: true
+
+  - name: Pass - Release has T1 as topic.
+    filter:
+      id: [ require_t_when_b1 ]
+    labels: [ B1, D1, T1 ]
+    expected: true
+
+  - name: Pass - Release has T2 as topic.
+    filter:
+      id: [ require_t_when_b1 ]
+    labels: [ B1, D1, T2 ]
     expected: true
 
   - name: Pass - PR has multiple topics
     filter:
       id: [ allow_multiple_t_when_b1 ]
-    labels: [ B1, T0, T7, D1 ]
+    labels: [ B1, T0, T2, T7, D1 ]
     expected: true
 
   - name: Fail - Only one criticality label allowed
