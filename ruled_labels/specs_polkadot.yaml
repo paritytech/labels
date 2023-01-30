@@ -254,12 +254,12 @@ rules:
       when: !one_of [B1]
       require: !one_of [C*]
 
-  - name: Release mentions need a topic "node" or "runtime"
-    id: require_t0_or_t1_when_b1
+  - name: Release mentions need a topic "node", "runtime" or "API"
+    id: require_t_when_b1
     tags: [PR]
     spec:
       when: !one_of [B1]
-      require: !one_of [T0, T1]
+      require: !one_of [T0, T1, T2]
 
   - name: Release mentions can have several topics
     id: allow_multiple_t_when_b1
