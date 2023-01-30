@@ -30,7 +30,7 @@ jobs:
         run: |
           export DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           export COMMIT=$(git rev-parse HEAD)
-          tera --env --env-key env --template templates/template.md.tera ruled_labels/specs_${{ matrix.repo }}.yaml > ./docs/${{ matrix.repo }}.md
+          tera --env --env-key env --template templates/template.md.tera ruled_labels/specs_${{ matrix.repo }}.yaml > ./docs/doc_${{ matrix.repo }}.md
           ls -al ./docs
 
       - name: Commit the changes
