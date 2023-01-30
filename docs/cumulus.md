@@ -1,6 +1,6 @@
 # Label Documentation for the repo `paritytech/cumulus`
 
-This document is generated automatically based on commit `a2ae48dd` and was last updated on `2023-01-30T09:47:23Z`.
+This document is generated automatically based on commit `edc51514` and was last updated on `2023-01-30T09:53:50Z`.
 
 The source data can be found in the [`ruled_labels`](../ruled_labels) folder of the repository. Those rules are processed by
 [ruled_labels](https://github.com/paritytech/ruled_labels) and **all** rules must be satisfied.
