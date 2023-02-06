@@ -201,7 +201,7 @@ labels:
   - name: U4-some_day_maybe
     description: Issue might be worth doing eventually.
     color: fffbed
-    
+
 rules:
   - name: Require a single Release (B) label
     id: single_b
@@ -228,7 +228,7 @@ rules:
     tags: [PR]
     spec:
       when: !one_of [B1]
-      require: !some_of [T*]      
+      require: !some_of [T*]
 
   - name: One single issue status (S) label allowed
     id: single_s

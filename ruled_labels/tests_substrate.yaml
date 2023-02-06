@@ -1,0 +1,81 @@
+name: Substrate ruled-labels test cases
+spec_file: specs.yaml
+
+specs:
+  - name: Pass - Pass all
+    filter:
+      id: [single_b, single_d, single_u, single_s, single_c]
+    labels: [B1, C1, D1, T1, S4]
+    expected: true
+
+  - name: Fail - Require release label
+    filter:
+      id: [single_b]
+    labels: [A1]
+    expected: false
+
+  - name: Pass - Release label provided.
+    filter:
+      id: [release_notes]
+    labels: [A1, B0]
+    expected: true
+
+  - name: Fail - Only one audit label allowed
+    filter:
+      id: [single_d]
+    labels: [D1, B1, D4]
+    expected: false
+
+  - name: Fail - Release needs criticality
+    filter:
+      id: [require_one_c_when_b1]
+    labels: [B1, T1, D1]
+    expected: false
+
+  - name: Fail - Release need a topic.
+    filter:
+      id: [require_t_when_b1]
+    labels: [B1, D1]
+    expected: false
+
+  - name: Pass - Release has T0 as topic.
+    filter:
+      id: [require_t_when_b1]
+    labels: [B1, D1, T0]
+    expected: true
+
+  - name: Pass - Release has T1 as topic.
+    filter:
+      id: [require_t_when_b1]
+    labels: [B1, D1, T1]
+    expected: true
+
+  - name: Pass - Release has T2 as topic.
+    filter:
+      id: [require_t_when_b1]
+    labels: [B1, D1, T2]
+    expected: true
+
+  - name: Pass - PR has multiple topics
+    filter:
+      id: [allow_multiple_t_when_b1]
+    labels: [B1, T0, T2, T7, D1]
+    expected: true
+
+  - name: Fail - Only one criticality label allowed
+    filter:
+      id: [single_c]
+    labels: [B1, C1, C3]
+    expected: false
+
+  - name: Fail - Only one urgency label allowed
+    filter:
+      id: [single_u]
+    labels: [B1, U1, U3]
+    expected: false
+
+  - name: Fail - Only one status label allowed
+    filter:
+      id: [single_s]
+    labels: [B1, S1, S3]
+    expected: false
