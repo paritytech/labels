@@ -35,7 +35,7 @@ specs:
   - name: Fail - Release need a topic.
     filter:
       id: [require_t_when_b1]
-    labels: [B1, D1]
+    labels: [B1, D1, T2]
     expected: false
 
   - name: Pass - Release has T0 as topic.
