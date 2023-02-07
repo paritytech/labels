@@ -1,7 +1,8 @@
 # labels
 
-The repo containes everything related to labels in `polkadot`, `substrate` and `cumulus` repos
+The repo containes specifications related to labels in the `polkadot` and `cumulus` repos. `substrate` is to come.
+It uses [ruled_labels](https://github.com/paritytech/ruled_labels) to defined the rules about requirements and interactions between labels.
 
-**docs** - here you can find all info about labels
-
-**ruled_labels** - files needed to run [this tool](https://github.com/paritytech/ruled_labels)
+If you need more information, check out the documentation:
+- [Labels Polkadot](./docs/doc_polkadot.md)
+- [Labels Cumulus](./docs/doc_cumulus.md)
