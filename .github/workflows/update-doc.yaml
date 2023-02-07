@@ -2,6 +2,7 @@ name: Generate Label Documentation
 
 on:
   pull_request:
+  push:
 
 jobs:
   update-documentation:
