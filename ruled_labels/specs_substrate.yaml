@@ -2,6 +2,42 @@
 name: paritytech/substrate
 description: Import from paritytech/substrate
 version: 0.0.1
+
+codes:
+  - code: A
+    name: Action labels
+    description: used with GHA and trigger a certain process
+  - code: B
+    name: Release note labels
+    description: Determines if a PR should be part of the release notes or not.
+  - code: C
+    name: Criticality
+    description: How critical is this change? Which impact does it have on the builders?
+  - code: D
+    name: Auditing labels
+    description: Required when there were changes in the paths `^frame/`, `^primitives/`
+  - code: E
+    name: Upgrade dependencies
+    description:
+  - code: F
+    name: Fail
+    description: Change breaks some part of the code
+  - code: I
+    name: Issues related labels
+    description:
+  - code: J
+    name: Just a continuation of the issue related labels
+    description:
+  - code: S
+    name: Status of an issue/PR
+    description:
+  - code: T
+    name: Topics
+    description: PR/Issue is related to this topic
+  - code: U
+    name: Urgency
+    description: In what time manner does this issue need to be resolved?
+
 labels:
   - name: A0-please_review
     description: Pull request needs code review.
