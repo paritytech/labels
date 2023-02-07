@@ -1,6 +1,6 @@
 # Label Documentation for the repo `paritytech/substrate`
 
-This document is generated automatically based on commit `a803d2c0` and was last updated on `2023-02-07T10:07:39Z`.
+This document is generated automatically based on commit `6c306cb7` and was last updated on `2023-02-07T10:18:08Z`.
 
 The source data can be found in the [`ruled_labels`](../ruled_labels) folder of the repository. Those rules are processed by
 [ruled_labels](https://github.com/paritytech/ruled_labels) and **all** rules must be satisfied.
