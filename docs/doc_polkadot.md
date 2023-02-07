@@ -1,6 +1,6 @@
 # Label Documentation for the repo `paritytech/polkadot`
 
-This document is generated automatically based on commit `c525a38e` and was last updated on `2023-02-07T09:56:47Z`.
+This document is generated automatically based on commit `404c24be` and was last updated on `2023-02-07T10:06:21Z`.
 
 The source data can be found in the [`ruled_labels`](../ruled_labels) folder of the repository. Those rules are processed by
 [ruled_labels](https://github.com/paritytech/ruled_labels) and **all** rules must be satisfied.
