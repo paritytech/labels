@@ -9,7 +9,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        repo: [polkadot, cumulus]
+        repo: [polkadot, cumulus, substrate]
 
     steps:
       - name: Checkout sources
