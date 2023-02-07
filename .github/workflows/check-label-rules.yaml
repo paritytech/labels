@@ -2,7 +2,6 @@ name: Check label Rules
 
 on:
   pull_request:
-  push:
 
 env:
   IMAGE: paritytech/ruled_labels:0.4.0
