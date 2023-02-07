@@ -33,12 +33,12 @@ jobs:
           tera --env --env-key env --template templates/template.md.tera ruled_labels/specs_${{ matrix.repo }}.yaml > ./docs/doc_${{ matrix.repo }}.md
           ls -al ./docs
 
-      - name: Commit the changes
-        run: |
-          git config --global user.name 'TeraBot'
-          git config --global user.email 'chevdor@users.noreply.github.com'
-          git config --global push.default current
-          git add ./docs
-          git pull
-          git commit ./docs -m "Update label documentation" || true
-          git push
+      # - name: Commit the changes
+      #   run: |
+      #     git config --global user.name 'TeraBot'
+      #     git config --global user.email 'chevdor@users.noreply.github.com'
+      #     git config --global push.default current
+      #     git add ./docs
+      #     git pull
+      #     git commit ./docs -m "Update label documentation" || true
+      #     git push
