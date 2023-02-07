@@ -1,0 +1,61 @@
+# Label Documentation for the repo `{{ name }}`
+
+This document is generated automatically based on commit `{{ env.COMMIT | truncate(length=8, end="")}}` and was last updated on `{{ env.DATE }}`.
+
+The source data can be found in the [`ruled_labels`](../ruled_labels) folder of the repository. Those rules are processed by
+[ruled_labels](https://github.com/paritytech/ruled_labels) and **all** rules must be satisfied.
+
+## Description
+
+This is the documentation for `{{ name }}` version `v{{ version }}`.
+It contains `{{ labels | length }}` labels and `{{ rules | length }}` rules.
+
+{{ description }}
+
+## Rules
+
+{% for rule in rules -%}
+<!-- {{rule.id}} -->
+- `{{ rule.name }}`
+
+{%- if rule.disabled %}
+⚠️ DISABLED
+{%- endif -%}
+
+{%- if rule.description -%}
+{{ rule.description }}
+{%- endif -%}
+
+{%- if rule.spec %}
+{%- if rule.spec.when %}
+  - when: {{ rule.spec.when|json_encode() }}
+{%- endif %}
+
+{%- if rule.spec.require %}
+  - require: {{ rule.spec.require|json_encode() }}
+{%- endif %}
+{%- endif %}
+
+{% endfor -%}
+
+{% if rule.spec.exclude %}
+- Exclude:
+{% for pat in rule.spec.exclude %}
+  - {{ pat }}
+{%- endfor %}{% endif %}
+
+## Labels
+
+{%- set_global current_code = '' -%}
+{% for label in labels | sort(attribute="name") -%}
+
+{%- set code = label.name | truncate(length=1, end="") -%}
+{%- if code != current_code -%}
+{%- set_global current_code = code -%}
+{% for c in codes | filter(attribute="code", value=code) %}
+### `{{ c.code }}␣` - {{ c.name }}: {{c.description}}
+{% endfor %}
+{%- endif -%}
+
+- `{{ label.name }}`: {{ label.description }}
+{% endfor %}
