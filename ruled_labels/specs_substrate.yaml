@@ -259,12 +259,19 @@ rules:
       when: !one_of [B1]
       require: !one_of [T0, T1, T2]
 
-  - name: Release mentions can have several topics
-    id: allow_multiple_t_when_b1
+  # - name: Release mentions can have several topics
+  #   id: allow_multiple_t_when_b1
+  #   tags: [PR]
+  #   spec:
+  #     when: !one_of [B1]
+  #     require: !some_of [T*]
+
+  - name: Release mentions should have a single topic for now
+    id: allow_single_t_when_b1
     tags: [PR]
     spec:
       when: !one_of [B1]
-      require: !some_of [T*]
+      require: !one_of [T*]
 
   - name: One single issue status (S) label allowed
     id: single_s
