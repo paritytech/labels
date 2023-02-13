@@ -37,6 +37,9 @@ codes:
   - code: U
     name: Urgency
     description: In what time manner does this issue need to be resolved?
+  - code: Z
+    name: Contribution labels
+    description: If you want to contribute to our project, here you will find issues of different levels of difficulty and mentored issues
 
 labels:
   - name: A0-please_review
@@ -237,6 +240,30 @@ labels:
   - name: U4-some_day_maybe
     description: Issue might be worth doing eventually.
     color: fffbed
+  - name: Z0-trivial
+    description: Writing the issue is of the same difficulty as patching the code.
+    color: ffffff
+  - name: Z1-easy
+    description: Can be fixed primarily by duplicating and adapting code by an intermediate coder
+    color: e8e0fc
+  - name: Z2-medium
+    description: Can be fixed by a coder with good Rust knowledge but little knowledge of the codebase.
+    color: DED2FA
+  - name: Z3-substantial
+    description: Can be fixed by an experienced coder with a working knowledge of the codebase.
+    color: d4c5f9
+  - name: Z4-involved
+    description: Can be fixed by an expert coder with good knowledge of the codebase.
+    color: 6849a7
+  - name: Z5-epic
+    description: Can only be fixed by John Skeet.
+    color: 2a0d73
+  - name: Z6-mentor
+    description: An easy task where a mentor is available. Please indicate in the issue who the mentor could be.
+    color: FDEFFB
+  - name: Z7-question
+    description: Issue is a question. Closer should answer.
+    color: fff5fb
 
 rules:
   - name: Require a single Release (B) label
