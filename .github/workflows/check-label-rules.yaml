@@ -1,6 +1,8 @@
 name: Check label Rules
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
 
 env:
