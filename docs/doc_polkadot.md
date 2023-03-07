@@ -1,6 +1,6 @@
 # Label Documentation for the repo `paritytech/polkadot`
 
-This document is generated automatically based on commit `7f87fabb` and was last updated on `2023-02-07T12:01:14Z`.
+This document is generated automatically based on commit `71aec916` and was last updated on `2023-03-07T13:25:21Z`.
 
 The source data can be found in the [`ruled_labels`](../ruled_labels) folder of the repository. Those rules are processed by
 [ruled_labels](https://github.com/paritytech/ruled_labels) and **all** rules must be satisfied.
@@ -28,10 +28,10 @@ Import from paritytech/polkadot
   - when: {"!one_of":["B1"]}
   - require: {"!one_of":["T0","T1","T2"]}
 
-<!-- allow_multiple_t_when_b1 -->
-- `Release mentions can have several topics`
+<!-- allow_single_t_when_b1 -->
+- `Release mentions should have a single topic for now`
   - when: {"!one_of":["B1"]}
-  - require: {"!some_of":["T*"]}
+  - require: {"!one_of":["T*"]}
 
 <!-- single_s -->
 - `One single issue status (S) label allowed`
@@ -81,7 +81,7 @@ Import from paritytech/polkadot
 - `D5-nicetohaveaudit ⚠️`: PR contains trivial changes to logic that should be properly reviewed
 - `D9-needsaudit 👮`: PR contains changes to fund-managing logic that should be properly reviewed and externally audited
 
-### `E␣` - Upgrade dependencies: 
+### `E␣` - Dependencies: Upgrade dependencies
 - `E0-runtime_migration`: PR introduces code that might require downstream chains to run a runtime upgrade
 - `E1-database_migration`: PR introduces code that does a one-way migration of the database
 - `E2-dependencies`: Pull requests that update a dependency file
@@ -95,7 +95,7 @@ Import from paritytech/polkadot
 - `F2-breaks_consensus`: This change breaks consensus or consensus code
 - `F3-breaks_API`: This PR changes public API; next release should be major
 
-### `I␣` - Issues related labels: 
+### `I␣` - Issues: Issues related labels
 - `I0-consensus`: Issue can lead to a consensus failure
 - `I1-panic`: The node panics and exits without proper error handling
 - `I10-optimisation`: An enhancement to provide better overall performance in terms of time-to-completion for a task
@@ -108,7 +108,7 @@ Import from paritytech/polkadot
 - `I8-refactor`: Code needs refactoring
 - `I9-footprint`: An enhancement to provide a smaller (system load, memory, network or disk) footprint
 
-### `J␣` - Just a continuation of the issue related labels: 
+### `J␣` - Issues: Just a continuation of the issue related labels
 - `J0-enhancement`: An additional feature request
 - `J1-meta`: A specific issue for grouping tasks or bugs of a specific category.
 - `J2-unconfirmed`: Issue might be valid, but it's not yet known. It should not be worked on until it is verified.
@@ -118,7 +118,7 @@ Import from paritytech/polkadot
 - `J6-invalid`: Issue is invalid. Closer should comment why.
 - `J7-mentor`: An easy task where a mentor is available. Please indicate in the issue who the mentor could be.
 
-### `S␣` - Status of an issue/PR: 
+### `S␣` - Status: Status of an issue/PR
 - `S0-design`: PR/Issue is in the design stage
 - `S1-implement`: PR/Issue is in the implementation stage
 - `S2-test/monitor`: PR/Issue is in the testing stage
