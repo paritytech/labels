@@ -24,3 +24,8 @@ Absolutly, look for the `tests_<name>.yaml` files in [here](https://github.com/p
 ## Where can I report issues/doubts I have about some rules ?
 
 You can open a new issue in the [labels repository](https://github.com/paritytech/labels/issues).
+
+## What happens when rules fail ?
+
+If you label your PR with an invalid set of labels, the CI will fail and tell you what the issue is.
+You can see an example [here](https://github.com/paritytech/cumulus/actions/runs/4362797055/jobs/7628115688) where a `B` label was missing.
