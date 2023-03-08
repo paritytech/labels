@@ -9,6 +9,7 @@ help:
 doc:
   ./scripts/build-doc.sh
 
+# Generate the md book
 book: doc
   ./scripts/generate_book.sh
   open docs/book/index.html
