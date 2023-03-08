@@ -59,3 +59,6 @@ It contains `{{ labels | length }}` labels and `{{ rules | length }}` rules.
 
 - `{{ label.name }}`: {{ label.description }}
 {% endfor %}
+
+---
+{% include "footer.md.tera" %}

@@ -1,0 +1,12 @@
+[book]
+authors = ["Chevdor"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Labels"
+
+[output.html]
+site-url = "/labels/"
+git-repository-url = "https://github.com/paritytech/labels"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/paritytech/labels/edit/master/{path}"
