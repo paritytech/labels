@@ -50,10 +50,8 @@ jobs:
 
       - name: Generate the doc for ${{ matrix.repo }}
         run: |
-          export DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          export COMMIT=$(git rev-parse HEAD)
-          tera --env --env-key env --include --template templates/template.md.tera ruled_labels/specs_${{ matrix.repo }}.yaml > ./docs/doc_${{ matrix.repo }}.md
-          ls -al ./docs
+          ./scripts/build-doc.sh ${{ matrix.repo }}
+          ls -al ./docs/src
 
       - name: Setup Pages
         id: pages
@@ -70,7 +68,9 @@ jobs:
 
   # Deployment job
   deploy:
-    # if: ${{ github.ref == 'refs/heads/main' }}
+    # this job will fail unless we are in the main branch
+    # so we skip the job for other branches such as PRs.
+    if: ${{ github.ref == 'refs/heads/main' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
