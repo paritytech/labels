@@ -5,13 +5,10 @@ _default:
 help:
 	just --list
 
-
 # Generate documentation
 doc:
-    #!/usr/bin/env bash
-    export DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-    export COMMIT=$(git rev-parse HEAD)
-    for chain in polkadot substrate cumulus; do
-        echo "Generating doc for $chain..."
-        tera --env --env-key env --template templates/template.md.tera ruled_labels/specs_${chain}.yaml > ./docs/doc_${chain}.md
-    done
+  ./scripts/build-doc.sh
+
+book: doc
+  ./scripts/generate_book.sh
+  open docs/book/index.html

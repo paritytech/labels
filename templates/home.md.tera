@@ -1,0 +1,14 @@
+# Labels
+
+This website provides the documentation about Labels.
+
+The source data can be found in the [`ruled_labels`](../ruled_labels) folder of the repository. It contains the specs and tests as YAML files.
+Those files contain:
+- the list of labels
+- explanations about the label codes (the first letter)
+- the logic ruling whether a set of labels is valid or not
+
+Those rules are processed by [ruled_labels](https://github.com/paritytech/ruled_labels) and **all** rules must be satisfied.
+
+---
+{% include "footer.md.tera" %}
