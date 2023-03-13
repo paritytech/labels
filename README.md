@@ -5,6 +5,6 @@ It uses [ruled_labels](https://github.com/paritytech/ruled_labels) to defined th
 
 
 If you need more information, check out the documentation:
-- [Labels Polkadot](./docs/doc_polkadot.md)
-- [Labels Cumulus](./docs/doc_cumulus.md)
-- [Labels Substrate](./docs/doc_substrate.md)
+- [Labels Polkadot](./ruled_labels/specs_polkadot.yaml)
+- [Labels Cumulus](./ruled_labels/specs_cumulus.yaml)
+- [Labels Substrate](./ruled_labels/specs_substrate.yaml)
