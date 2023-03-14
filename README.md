@@ -7,4 +7,4 @@ It uses [ruled_labels](https://github.com/paritytech/ruled_labels) to defined th
 If you need more information, check out the documentation:
 - [Labels Polkadot](./ruled_labels/specs_polkadot.yaml)
 - [Labels Cumulus](./ruled_labels/specs_cumulus.yaml)
-- [Labels Substrate](./ruled_labels/specs_substrate.yaml)
+- [Labels Substrate](https://paritytech.github.io/labels/doc_substrate.html)
