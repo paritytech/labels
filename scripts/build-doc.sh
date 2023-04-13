@@ -6,7 +6,7 @@ export COMMIT=$(git rev-parse HEAD)
 mkdir -p ./docs/src
 
 chains=$1
-chains=${chains:-"polkadot substrate cumulus"}
+chains=${chains:-"substrate polkadot cumulus"}
 
 for chain in $chains; do
     echo "Generating doc for $chain..."

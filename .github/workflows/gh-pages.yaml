@@ -25,10 +25,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 1
-      matrix:
-        repo: [polkadot, cumulus, substrate]
+
     env:
       MDBOOK_VERSION: 0.4.21 # https://github.com/rust-lang/mdBook/releases
       TERA_VERSION: 0.2.2 # https://github.com/chevdor/tera-cli/release
@@ -48,10 +45,11 @@ jobs:
           wget -O ${{ runner.temp }}/tera.deb https://github.com/chevdor/tera-cli/releases/download/v${TERA_VERSION}/tera-cli_linux_amd64.deb && \
           sudo dpkg -i ${{ runner.temp }}/tera.deb
 
-      - name: Generate the doc for ${{ matrix.repo }}
-        run: |
-          ./scripts/build-doc.sh ${{ matrix.repo }}
-          ls -al ./docs/src
+      - name: Generate the doc
+        run: ./scripts/build-doc.sh
+
+      - name: Check
+        run: ls -al ./docs/src
 
       - name: Setup Pages
         id: pages
