@@ -56,8 +56,7 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Render book
-        run: |
-          ./scripts/generate_book.sh
+        run: ./scripts/generate_book.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
