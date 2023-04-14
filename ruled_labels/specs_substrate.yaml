@@ -37,6 +37,9 @@ codes:
   - code: U
     name: Urgency
     description: In what time manner does this issue need to be resolved?
+  - code: X
+    name: Note-worthy labels
+    description: These labels determine in which section of the release-notes the PR will be shown.
   - code: Z
     name: Contribution labels
     description: If you want to contribute to our project, here you will find issues of different levels of difficulty and mentored issues
@@ -195,34 +198,22 @@ labels:
   - name: S4-blocked
     description: "Issue is blocked, see comments for further information."
     color: "122381"
-  - name: T0-node
-    description: This PR/Issue is related to the topic “node”.
-    color: fbffe0
-  - name: T1-runtime
-    description: This PR/Issue is related to the topic “runtime”.
-    color: F5FCE6
-  - name: T2-API
-    description: This PR/Issue is related to APIs.
-    color: 009B40
-  - name: T3-relay_chain
+  - name: T0-relay_chain
     description: This PR/Issue is related to the Relay Chain.
     color: ffeeee
-  - name: T4-smart_contracts
+  - name: T1-smart_contracts
     description: This PR/Issue is related to smart contracts.
     color: 0C7BAD
-  - name: T5-parachains
+  - name: T2-parachains
     description: This PR/Issue is related to Parachains.
     color: 0052cc
-  - name: T6-XCM
-    description: This PR/Issue is related to XCM.
-    color: d4c5f9
-  - name: T7-system_parachains
+  - name: T3-system_parachains
     description: This PR/Issue is related to System Parachains.
     color: 86e62a
-  - name: T8-bridges
+  - name: T4-bridges
     description: This PR/Issue is related to bridges.
     color: BFDADC
-  - name: T9-release
+  - name: T5-release
     description: This PR/Issue is related to topics touching the release notes.
     color: 0052cc
   - name: U0-drop_everything
@@ -240,6 +231,18 @@ labels:
   - name: U4-some_day_maybe
     description: Issue might be worth doing eventually.
     color: fffbed
+  - name: X0-node
+    description: This PR/Issue is related to the topic “node”
+    color: fbffe0
+  - name: X1-runtime
+    description: This PR/Issue is related to the topic “runtime”
+    color: F5FCE6
+  - name: X2-API
+    description: This PR/Issue is related to APIs
+    color: 009B40
+  - name: X3-XCM
+    description: This PR/Issue is related to XCM.
+    color: d4c5f9
   - name: Z0-trivial
     description: Writing the issue is of the same difficulty as patching the code.
     color: ffffff
@@ -280,25 +283,18 @@ rules:
       require: !one_of [C*]
 
   - name: Release mentions need a topic "node", "runtime" or "API"
-    id: require_t0_or_t1_when_b1
+    id: require_x_when_b1
     tags: [PR]
     spec:
       when: !one_of [B1]
-      require: !one_of [T0, T1, T2]
-
-  # - name: Release mentions can have several topics
-  #   id: allow_multiple_t_when_b1
-  #   tags: [PR]
-  #   spec:
-  #     when: !one_of [B1]
-  #     require: !some_of [T*]
-
-  - name: Release mentions should have a single topic for now
-    id: allow_single_t_when_b1
-    tags: [PR]
+      require: !one_of [X0, X1, X2]
+  
+  - name: One single issue release topic (X) label allowed
+    id: single_x
+    tags:
     spec:
-      when: !one_of [B1]
-      require: !one_of [T*]
+      when: !some_of [X*]
+      require: !one_of [X*]
 
   - name: One single issue status (S) label allowed
     id: single_s

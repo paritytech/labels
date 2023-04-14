@@ -31,41 +31,35 @@ specs:
       id: [require_one_c_when_b1]
     labels: [B1, T1, D1]
     expected: false
-
-  - name: Fail - Release needs a topic
+ 
+  - name: Fail - Release need a topic
     filter:
-      id: [require_t0_or_t1_when_b1]
-    labels: [B1, D1]
+      id: [ require_x_when_b1 ]
+    labels: [ B1, D1 ]
     expected: false
 
-  - name: Pass - Release has T0 as topic
+  - name: Pass - Release has X0 as topic
     filter:
-      id: [require_t0_or_t1_when_b1]
-    labels: [B1, D1, T0]
+      id: [ single_x ]
+    labels: [ B1, D1, X0 ]
     expected: true
 
-  - name: Pass - Release has T1 as topic
+  - name: Pass - Release has X1 as topic
     filter:
-      id: [require_t0_or_t1_when_b1]
-    labels: [B1, D1, T1]
+      id: [ single_x ]
+    labels: [ B1, D1, X1 ]
     expected: true
 
-  - name: Pass - Release has T2 as topic
+  - name: Pass - Release has X2 as topic
     filter:
-      id: [require_t0_or_t1_when_b1]
-    labels: [B1, D1, T2]
+      id: [ single_x ]
+    labels: [ B1, D1, X2 ]
     expected: true
 
-  # - name: Pass - PR has multiple topics
-  #   filter:
-  #     id: [allow_multiple_t_when_b1]
-  #   labels: [B1, T0, T2, T7, D1]
-  #   expected: true
-
-  - name: FAIL FOR NOW - PR has multiple topics
+  - name: Fail - PR has multiple release topics
     filter:
-      id: [allow_single_t_when_b1]
-    labels: [B1, T0, T2, T7, D1]
+      id: [ single_x ]
+    labels: [B1, X0, X2, X1, D1]
     expected: false
 
   - name: Fail - Only one criticality label allowed
