@@ -1,0 +1,187 @@
+
+name: Monorepo labels
+description: Import on 2022-08-10
+
+codes:
+  - code: A
+    name: Action 
+    description: used with GHA and trigger a certain process
+  - code: B
+    name: Dependencies 
+    description: Upgrade dependencies
+  - code: C
+    name: Contribution 
+    description: Upgrade dependencies
+  - code: D
+    name: Auditing 
+    description: Required when there were changes in the paths [CI/CD INPUT NEW FILE PATHS]. Also used to indicate the need for a documentation audit of DevRel.
+  - code: F
+    name: Fails
+    description: Change breaks some part of the code
+  - code: I
+    name: Issues 
+    description: Categorisation of issues
+  - code: T
+    name: Topics
+    description: PR/Issue is related to this topic
+
+labels:
+  - name: A0-please_review
+    description: Pull request needs code review.
+    color: "666666"
+  - name: A1-needs_burnin
+    description: Pull request needs to be tested on a live validator node before merge. DevOps team is notified via matrix.
+    color: c7def8
+  - name: A2-insubstantial
+    description: Pull request requires no code review (e.g., a sub-repository hash update).
+    color: C6C7F8
+  - name: A3-in_progress
+    description: Pull request is in progress. No review needed at this stage.
+    color: DBC6F8
+  - name: A4-stale
+    description: Pull request did not receive any updates in a long time. No review needed at this stage. Close it.
+    color: F2C5F8
+  - name: A5-backport
+    description: Pull request is already reviewed well in another branch.
+    color: F8C5E7
+  - name: A6-unconfirmed
+    description: Issue might be valid, but it's not yet known.
+    color: "000000"
+  - name: B0-runtime_migration
+    description: PR introduces code that might require downstream chains to run a runtime upgrade.
+    color: c2e0c6
+  - name: B1-database_migration
+    description: PR introduces code that does a one-way migration of the database.
+    color: f4f5f9
+  - name: B2-node_first_update
+    description: This is a runtime change that will require all nodes to be update BEFORE the runtime upgrade.
+    color: e8d7d7
+  - name: B3-introduce_new_host_function
+    description: PR adds new host functions which is not used yet, so no need for upgrade.
+    color: f9f2f2
+  - name: B4-enable_new_host_function
+    description: PR enables new host functions which requires a node release before a runtime upgrade.
+    color: f9f2f2
+  - name: B5-enable_modified_host_function
+    description: INPUT NEEDED FROM @KOUTE
+    color: f9f2f2
+  - name: B6-disable_host_function
+    description: PR disables host functions which requires a node release before a runtime upgrade.
+    color: f9f2f2
+  - name: C0-easy
+    description: Can be fixed primarily by duplicating and adapting code by an intermediate coder.
+    color: eeeeee
+  - name: C1-medium
+    description: Can be fixed by a coder with good Rust knowledge but little knowledge of the codebase.
+    color: eebb00
+  - name: C2-substantial
+    description: Can be fixed by an experienced coder with a working knowledge of the codebase.
+    color: D4C5F9
+  - name: C3-involved
+    description: Can be fixed by an expert coder with good knowledge of the codebase.
+    color: E99695
+  - name: C4-mentor
+    description: An easy task where a mentor is available. Please indicate in the issue who the mentor could be.
+    color: "5319e7"
+  - name: C5-reserved
+    description: This issue should not be picked up by anyone unless approved.
+    color: cdadad
+  - name: D0-nice_to_have_audit
+    description: PR contains trivial changes to logic that should be properly reviewed.
+    color: c5def5
+  - name: D1-needs_audit
+    description: PR contains changes to fund-managing logic that should be properly reviewed and externally audited.
+    color: C3EDC0
+  - name: D2-needs_DevRel_audit
+    description: PR contains changes that are relevant for documentation, should be audited by DevRel before merge.
+    color: C0E7CC
+  - name: D2-audited
+    description: PR contains changes to fund-managing logic that has been properly reviewed and externally audited.
+    color: C0E7CC
+  - name: F0-breaks_everything
+    description: This change breaks the underlying networking, sync or related and thus will cause a fork.
+    color: bdadad
+  - name: F1-breaks_authoring
+    description: This change breaks authorities or authoring code.
+    color: e99695
+  - name: F2-breaks_consensus
+    description: This change breaks consensus or consensus code.
+    color: "5319e7"
+  - name: F3-breaks_RPC_API
+    description: This PR changes the RPC API.
+    color: cdadad
+  - name: F4-breaks_runtime_API
+    description: This PR changes the runtime API.
+    color: cdadad
+  - name: F4-breaks_host_function
+    description: This PR changes a host function.
+    color: cdadad
+  - name: I0-panic
+    description: The node panics and exits without proper error handling.
+    color: 17b25d
+  - name: I1-security
+    description: The node fails to follow expected, security-sensitive, behaviour.
+    color: d93f0b
+  - name: I2-bug
+    description: The node fails to follow expected behavior.
+    color: "249899"
+  - name: I3-annoyance
+    description: The node behaves within expectations, however this “expected behaviour” itself is at issue.
+    color: D6075D
+  - name: I4-refactor
+    description: Code needs refactoring.
+    color: 0075ca
+  - name: I5-enhancement
+    description: An additional feature request.
+    color: c2e0c6
+  - name: I6-meta
+    description: A specific issue for grouping tasks or bugs of a specific category.
+    color: a2eeef
+  - name: I7-duplicate
+    description: Issue is a duplicate. Closer should comment with a link to the duplicate.
+    color: D62209
+  - name: I8-wont_fix
+    description: Issue is in principle valid, but this project will not address it. Closer should explain why.
+    color: FB3701
+  - name: I9-invalid
+    description: Issue is invalid. Closer should comment why.
+    color: F76E02
+  - name: I10-optimisation
+    description: An enhancement to provide better overall performance in terms of time-to-completion for a task.
+    color: c5def5
+  - name: T0-node
+    description: This PR/Issue is related to the topic “node”.
+    color: fbffe0
+  - name: T1-runtime
+    description: This PR/Issue is related to the topic “runtime”.
+    color: F5FCE6
+  - name: T2-RPC_API
+    description: This PR/Issue is related to RPC APIs.
+    color: 009B40
+  - name: T3-runtime_API
+    description: This PR/Issue is related to runtime APIs.
+    color: 009B40
+  - name: T4-host_functions
+    description: This PR/Issue is related to host functions.
+    color: 009B40
+  - name: T5-XCM
+    description: This PR/Issue is related to XCM.
+    color: 006b75
+  - name: T6-smart_contracts
+    description: This PR/Issue is related to smart contracts.
+    color: 0C7BAD
+  - name: T7-parachains_engineering
+    description: This PR/Issue is related to Parachains performance, stability, maintenance.
+    color: 0052cc
+  - name: T8-parachains_protocol
+    description: This PR/Issue is related to Parachains features and protocol changes.
+    color: 5319e7
+  - name: T9-polkadot
+    description: This PR/Issue is related to/affects Polkadot.
+    color: ffeeee
+  - name: T10-tests
+    description: This PR/Issue is related to tests.
+    color: 6C9C98
+  - name: T11-documentation
+    description: This PR/Issue is related to documentation.
+    color: f48a75
