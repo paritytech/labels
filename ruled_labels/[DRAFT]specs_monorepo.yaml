@@ -7,17 +7,14 @@ codes:
     name: Action 
     description: used with GHA and trigger a certain process
   - code: B
-    name: Dependencies 
-    description: Upgrade dependencies
+    name: Breaking changes 
+    description: Upgrade dependencies, relevant for downstream Parachains/Parathreads.
   - code: C
-    name: Contribution 
-    description: Upgrade dependencies
+    name: Complexity 
+    description: Complexity of the issues, also used for contribution guidelines.
   - code: D
     name: Auditing 
     description: Required when there were changes in the paths [CI/CD INPUT NEW FILE PATHS]. Also used to indicate the need for a documentation audit of DevRel.
-  - code: F
-    name: Fails
-    description: Change breaks some part of the code
   - code: I
     name: Issues 
     description: Categorisation of issues
@@ -44,9 +41,6 @@ labels:
   - name: A5-backport
     description: Pull request is already reviewed well in another branch.
     color: F8C5E7
-  - name: A6-unconfirmed
-    description: Issue might be valid, but it's not yet known.
-    color: "000000"
   - name: B0-runtime_migration
     description: PR introduces code that might require downstream chains to run a runtime upgrade.
     color: c2e0c6
@@ -56,18 +50,21 @@ labels:
   - name: B2-node_first_update
     description: This is a runtime change that will require all nodes to be update BEFORE the runtime upgrade.
     color: e8d7d7
-  - name: B3-introduce_new_host_function
-    description: PR adds new host functions which is not used yet, so no need for upgrade.
+  - name: B3-add_new_host_function_to_client
+    description: PR adds a new host function to the client which is not yet used by the runtime.
     color: f9f2f2
-  - name: B4-enable_new_host_function
-    description: PR enables new host functions which requires a node release before a runtime upgrade.
+  - name: B4-use_previously_unused_host_function_in_runtime
+    description: PR modifies the runtime to use a new host function; this raises the minimum client node version requirement for the next runtime upgrade!
     color: f9f2f2
-  - name: B5-enable_modified_host_function
-    description: INPUT NEEDED FROM @KOUTE
+  - name: B5-unused_host_function_breaking_change
+    description: PR introduces a breaking change to the behavior of a host function which is not used by any runtime.
     color: f9f2f2
-  - name: B6-disable_host_function
-    description: PR disables host functions which requires a node release before a runtime upgrade.
+  - name: B6-remove_unused_host_function
+    description: PR removes a host function not used by any runtime.
     color: f9f2f2
+  - name: B7-breaking_change_RPC_API
+    description: This PR this changes the behavior of the external RPC API in a backwards incompatible way.
+    color: cdadad
   - name: C0-easy
     description: Can be fixed primarily by duplicating and adapting code by an intermediate coder.
     color: eeeeee
@@ -95,27 +92,9 @@ labels:
   - name: D2-needs_DevRel_audit
     description: PR contains changes that are relevant for documentation, should be audited by DevRel before merge.
     color: C0E7CC
-  - name: D2-audited
+  - name: D3-audited
     description: PR contains changes to fund-managing logic that has been properly reviewed and externally audited.
     color: C0E7CC
-  - name: F0-breaks_everything
-    description: This change breaks the underlying networking, sync or related and thus will cause a fork.
-    color: bdadad
-  - name: F1-breaks_authoring
-    description: This change breaks authorities or authoring code.
-    color: e99695
-  - name: F2-breaks_consensus
-    description: This change breaks consensus or consensus code.
-    color: "5319e7"
-  - name: F3-breaks_RPC_API
-    description: This PR changes the RPC API.
-    color: cdadad
-  - name: F4-breaks_runtime_API
-    description: This PR changes the runtime API.
-    color: cdadad
-  - name: F4-breaks_host_function
-    description: This PR changes a host function.
-    color: cdadad
   - name: I0-panic
     description: The node panics and exits without proper error handling.
     color: 17b25d
@@ -149,6 +128,12 @@ labels:
   - name: I10-optimisation
     description: An enhancement to provide better overall performance in terms of time-to-completion for a task.
     color: c5def5
+  - name: I11-unconfirmed
+    description: Issue might be valid, but it's not yet known.
+    color: "000000"
+  - name: I12-deprecation
+    description: The current issue/pr is, or should be, part of a deprecation process.
+    color: "000000"
   - name: T0-node
     description: This PR/Issue is related to the topic “node”.
     color: fbffe0
@@ -185,3 +170,6 @@ labels:
   - name: T11-documentation
     description: This PR/Issue is related to documentation.
     color: f48a75
+  - name: T12-benchmarks
+    description: This PR/Issue is related to benchmarking and weights.
+    color: 5319e7
