@@ -74,9 +74,6 @@ labels:
   - name: C4-mentor
     description: An easy task where a mentor is available. Please indicate in the issue who the mentor could be.
     color: "5319e7"
-  - name: C5-reserved
-    description: This issue should not be picked up by anyone unless approved.
-    color: cdadad
   - name: I0-panic
     description: The node panics and exits without proper error handling.
     color: 17b25d
