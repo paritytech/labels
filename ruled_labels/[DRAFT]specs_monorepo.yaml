@@ -23,22 +23,16 @@ codes:
     description: PR/Issue is related to this topic
 
 labels:
-  - name: A0-please_review
-    description: Pull request needs code review.
-    color: "666666"
-  - name: A1-needs_burnin
+  - name: A0-needs_burnin
     description: Pull request needs to be tested on a live validator node before merge. DevOps team is notified via matrix.
     color: c7def8
-  - name: A2-insubstantial
+  - name: A1-insubstantial
     description: Pull request requires no code review (e.g., a sub-repository hash update).
     color: C6C7F8
-  - name: A3-in_progress
-    description: Pull request is in progress. No review needed at this stage.
-    color: DBC6F8
-  - name: A4-stale
+  - name: A2-stale
     description: Pull request did not receive any updates in a long time. No review needed at this stage. Close it.
     color: F2C5F8
-  - name: A5-backport
+  - name: A3-backport
     description: Pull request is already reviewed well in another branch.
     color: F8C5E7
   - name: B0-runtime_migration
