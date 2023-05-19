@@ -83,18 +83,6 @@ labels:
   - name: C5-reserved
     description: This issue should not be picked up by anyone unless approved.
     color: cdadad
-  - name: D0-nice_to_have_audit
-    description: PR contains trivial changes to logic that should be properly reviewed.
-    color: c5def5
-  - name: D1-needs_audit
-    description: PR contains changes to fund-managing logic that should be properly reviewed and externally audited.
-    color: C3EDC0
-  - name: D2-needs_DevRel_audit
-    description: PR contains changes that are relevant for documentation, should be audited by DevRel before merge.
-    color: C0E7CC
-  - name: D3-audited
-    description: PR contains changes to fund-managing logic that has been properly reviewed and externally audited.
-    color: C0E7CC
   - name: I0-panic
     description: The node panics and exits without proper error handling.
     color: 17b25d
@@ -120,18 +108,15 @@ labels:
     description: Issue is a duplicate. Closer should comment with a link to the duplicate.
     color: D62209
   - name: I8-wont_fix
-    description: Issue is in principle valid, but this project will not address it. Closer should explain why.
+    description: Issue might be invalid or this project will not address it. Closer should comment why.
     color: FB3701
-  - name: I9-invalid
-    description: Issue is invalid. Closer should comment why.
-    color: F76E02
-  - name: I10-optimisation
+  - name: I9-optimisation
     description: An enhancement to provide better overall performance in terms of time-to-completion for a task.
     color: c5def5
-  - name: I11-unconfirmed
+  - name: I10-unconfirmed
     description: Issue might be valid, but it's not yet known.
     color: "000000"
-  - name: I12-deprecation
+  - name: I11-deprecation
     description: The current issue/pr is, or should be, part of a deprecation process.
     color: "000000"
   - name: T0-node
@@ -172,4 +157,7 @@ labels:
     color: f48a75
   - name: T12-benchmarks
     description: This PR/Issue is related to benchmarking and weights.
+    color: 5319e7
+  - name: T13-RnD
+    description: This PR/Issue is part of technological research and development.
     color: 5319e7
