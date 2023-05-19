@@ -150,5 +150,5 @@ labels:
     description: This PR/Issue is related to benchmarking and weights.
     color: 5319e7
   - name: T13-RnD
-    description: This PR/Issue is part of technological research and development.
+    description: This PR/Issue is part of technology research and development.
     color: 5319e7
