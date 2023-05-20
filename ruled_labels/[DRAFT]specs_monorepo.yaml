@@ -153,5 +153,8 @@ labels:
     description: This PR/Issue is part of technology research and development.
     color: 5319e7
   - name: T14-system_parachains
-    description: This PR/Issue is part of technology research and development.
+    description: This PR/Issue is related to system parachains.
     color: 0C7BAD
+  - name: T15-bridges
+    description: This PR/Issue is related to bridges.
+    color: F5FCE6
