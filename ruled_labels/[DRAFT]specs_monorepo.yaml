@@ -106,10 +106,10 @@ labels:
     color: c5def5
   - name: I10-unconfirmed
     description: Issue might be valid, but it's not yet known.
-    color: "000000"
+    color: 723bf6
   - name: I11-deprecation
     description: The current issue/pr is, or should be, part of a deprecation process.
-    color: "000000"
+    color: e0b062
   - name: T0-node
     description: This PR/Issue is related to the topic “node”.
     color: fbffe0
