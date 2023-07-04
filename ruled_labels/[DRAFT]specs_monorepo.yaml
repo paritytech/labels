@@ -5,22 +5,19 @@ description: Import on 2023-05-09
 codes:
   - code: A
     name: Action 
-    description: used with GHA and trigger a certain process
-  - code: B
-    name: Breaking changes 
-    description: Upgrade dependencies, relevant for downstream Parachains/Parathreads.
+    description: Used with GHA and trigger a certain process.
   - code: C
-    name: Complexity 
-    description: Complexity of the issues, also used for contribution guidelines.
+    name: Contrubution 
+    description: Labels used for contributions.
   - code: D
-    name: Auditing 
-    description: Required when there were changes in the paths [CI/CD INPUT NEW FILE PATHS]. Also used to indicate the need for a documentation audit of DevRel.
+    name: Difficulty 
+    description: Difficulty of the issues, also used for contributions.
   - code: I
     name: Issues 
-    description: Categorisation of issues
+    description: Categorisation of issues.
   - code: T
     name: Topics
-    description: PR/Issue is related to this topic
+    description: PR/Issue is related to this topic.
 
 labels:
   - name: A0-needs_burnin
@@ -35,45 +32,24 @@ labels:
   - name: A3-backport
     description: Pull request is already reviewed well in another branch.
     color: F8C5E7
-  - name: B0-runtime_migration
-    description: PR introduces code that might require downstream chains to run a runtime upgrade.
-    color: c2e0c6
-  - name: B1-database_migration
-    description: PR introduces code that does a one-way migration of the database.
-    color: f4f5f9
-  - name: B2-node_first_update
-    description: This is a runtime change that will require all nodes to be update BEFORE the runtime upgrade.
-    color: e8d7d7
-  - name: B3-add_new_host_function_to_client
-    description: PR adds a new host function to the client which is not yet used by the runtime.
-    color: f9f2f2
-  - name: B4-use_previously_unused_host_function_in_runtime
-    description: PR modifies the runtime to use a new host function; this raises the minimum client node version requirement for the next runtime upgrade!
-    color: f9f2f2
-  - name: B5-unused_host_function_breaking_change
-    description: PR introduces a breaking change to the behavior of a host function which is not used by any runtime.
-    color: f9f2f2
-  - name: B6-remove_unused_host_function
-    description: PR removes a host function not used by any runtime.
-    color: f9f2f2
-  - name: B7-breaking_change_RPC_API
-    description: This PR this changes the behavior of the external RPC API in a backwards incompatible way.
-    color: cdadad
-  - name: C0-easy
+  - name: C1-mentor
+    description: A task where a mentor is available. Please indicate in the issue who the mentor could be.
+    color: "5319e7"
+  - name: C2-ready_for_review
+    description: A PR opened by a contributor is ready for review.
+    color: "249899"
+  - name: D0-easy
     description: Can be fixed primarily by duplicating and adapting code by an intermediate coder.
     color: eeeeee
-  - name: C1-medium
+  - name: D1-medium
     description: Can be fixed by a coder with good Rust knowledge but little knowledge of the codebase.
     color: eebb00
-  - name: C2-substantial
+  - name: D2-substantial
     description: Can be fixed by an experienced coder with a working knowledge of the codebase.
     color: D4C5F9
-  - name: C3-involved
+  - name: D3-involved
     description: Can be fixed by an expert coder with good knowledge of the codebase.
     color: E99695
-  - name: C4-mentor
-    description: An easy task where a mentor is available. Please indicate in the issue who the mentor could be.
-    color: "5319e7"
   - name: I0-panic
     description: The node panics and exits without proper error handling.
     color: 17b25d
