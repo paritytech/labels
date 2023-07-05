@@ -35,9 +35,6 @@ labels:
   - name: C1-mentor
     description: A task where a mentor is available. Please indicate in the issue who the mentor could be.
     color: "5319e7"
-  - name: C2-ready_for_review
-    description: A PR opened by a contributor is ready for review.
-    color: "249899"
   - name: D0-easy
     description: Can be fixed primarily by duplicating and adapting code by an intermediate coder.
     color: eeeeee
