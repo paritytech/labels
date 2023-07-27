@@ -86,48 +86,54 @@ labels:
   - name: T0-node
     description: This PR/Issue is related to the topic “node”.
     color: fbffe0
-  - name: T1-runtime
-    description: This PR/Issue is related to the topic “runtime”.
+  - name: T1-FRAME
+    description: This PR/Issue is related to core FRAME, the framework.
     color: F5FCE6
-  - name: T2-RPC_API
+  - name: T2-pallets
+    description: This PR/Issue is related to a particular pallet.
+    color: 7962d6
+  - name: T3-RPC_API
     description: This PR/Issue is related to RPC APIs.
-    color: 009B40
-  - name: T3-runtime_API
+    color: 635b61
+  - name: T4-runtime_API
     description: This PR/Issue is related to runtime APIs.
     color: 009B40
-  - name: T4-host_functions
+  - name: T5-host_functions
     description: This PR/Issue is related to host functions.
-    color: 009B40
-  - name: T5-XCM
+    color: E86C7A
+  - name: T6-XCM
     description: This PR/Issue is related to XCM.
     color: 006b75
-  - name: T6-smart_contracts
+  - name: T7-smart_contracts
     description: This PR/Issue is related to smart contracts.
     color: 0C7BAD
-  - name: T7-parachains_engineering
+  - name: T8-parachains_engineering
     description: This PR/Issue is related to Parachains performance, stability, maintenance.
     color: 0052cc
-  - name: T8-parachains_protocol
+  - name: T9-parachains_protocol
     description: This PR/Issue is related to Parachains features and protocol changes.
     color: 5319e7
-  - name: T9-polkadot
-    description: This PR/Issue is related to/affects Polkadot.
-    color: ffeeee
-  - name: T10-tests
+  - name: T10-polkadot
+    description: This PR/Issue is related to/affects the Polkadot network.
+    color: c90076
+  - name: T11-cumulus
+    description: This PR/Issue is related to cumulus.
+    color: 6a329f
+  - name: T12-tests
     description: This PR/Issue is related to tests.
     color: 6C9C98
-  - name: T11-documentation
+  - name: T13-documentation
     description: This PR/Issue is related to documentation.
     color: f48a75
-  - name: T12-benchmarks
+  - name: T14-benchmarks
     description: This PR/Issue is related to benchmarking and weights.
     color: 5319e7
-  - name: T13-RnD
+  - name: T15-RnD
     description: This PR/Issue is part of technology research and development.
     color: 5319e7
-  - name: T14-system_parachains
+  - name: T16-system_parachains
     description: This PR/Issue is related to system parachains.
     color: 0C7BAD
-  - name: T15-bridges
+  - name: T17-bridges
     description: This PR/Issue is related to bridges.
     color: F5FCE6
