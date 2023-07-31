@@ -137,3 +137,11 @@ labels:
   - name: T17-bridges
     description: This PR/Issue is related to bridges.
     color: F5FCE6
+
+# Currently added for testing purposes
+rules:
+  - name: Require a single Action (A) label
+    id: single_a
+    tags: [PR]
+    spec:
+      require: !one_of [A*]
