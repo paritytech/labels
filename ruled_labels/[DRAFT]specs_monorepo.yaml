@@ -1,19 +1,19 @@
-
 name: Monorepo labels
 description: Import on 2023-05-09
+version: 0.0.1
 
 codes:
   - code: A
-    name: Action 
+    name: Action
     description: Used with GHA and trigger a certain process.
   - code: C
-    name: Contrubution 
+    name: Contrubution
     description: Labels used for contributions.
   - code: D
-    name: Difficulty 
+    name: Difficulty
     description: Difficulty of the issues, also used for contributions.
   - code: I
-    name: Issues 
+    name: Issues
     description: Categorisation of issues.
   - code: T
     name: Topics
