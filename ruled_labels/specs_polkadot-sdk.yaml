@@ -1,0 +1,139 @@
+name: Polkadot SDK labels
+description: Import on 2023-08-25
+version: 0.0.1
+
+codes:
+  - code: A
+    name: Action
+    description: Used with GHA and trigger a certain process.
+  - code: C
+    name: Contrubution
+    description: Labels used for contributions.
+  - code: D
+    name: Difficulty
+    description: Difficulty of the issues, also used for contributions.
+  - code: I
+    name: Issues
+    description: Categorisation of issues.
+  - code: T
+    name: Topics
+    description: PR/Issue is related to this topic.
+
+labels:
+  - name: A0-needs_burnin
+    description: Pull request needs to be tested on a live validator node before merge. DevOps team is notified via matrix.
+    color: c7def8
+  - name: A1-insubstantial
+    description: Pull request requires no code review (e.g., a sub-repository hash update).
+    color: C6C7F8
+  - name: A2-stale
+    description: Pull request did not receive any updates in a long time. No review needed at this stage. Close it.
+    color: F2C5F8
+  - name: A3-backport
+    description: Pull request is already reviewed well in another branch.
+    color: F8C5E7
+  - name: C1-mentor
+    description: A task where a mentor is available. Please indicate in the issue who the mentor could be.
+    color: "5319e7"
+  - name: D0-easy
+    description: Can be fixed primarily by duplicating and adapting code by an intermediate coder.
+    color: eeeeee
+  - name: D1-medium
+    description: Can be fixed by a coder with good Rust knowledge but little knowledge of the codebase.
+    color: eebb00
+  - name: D2-substantial
+    description: Can be fixed by an experienced coder with a working knowledge of the codebase.
+    color: D4C5F9
+  - name: D3-involved
+    description: Can be fixed by an expert coder with good knowledge of the codebase.
+    color: E99695
+  - name: I0-panic
+    description: The node panics and exits without proper error handling.
+    color: 17b25d
+  - name: I1-security
+    description: The node fails to follow expected, security-sensitive, behaviour.
+    color: d93f0b
+  - name: I2-bug
+    description: The node fails to follow expected behavior.
+    color: "249899"
+  - name: I3-annoyance
+    description: The node behaves within expectations, however this “expected behaviour” itself is at issue.
+    color: D6075D
+  - name: I4-refactor
+    description: Code needs refactoring.
+    color: 0075ca
+  - name: I5-enhancement
+    description: An additional feature request.
+    color: c2e0c6
+  - name: I6-meta
+    description: A specific issue for grouping tasks or bugs of a specific category.
+    color: a2eeef
+  - name: I7-duplicate
+    description: Issue is a duplicate. Closer should comment with a link to the duplicate.
+    color: D62209
+  - name: I8-wont_fix
+    description: Issue might be invalid or this project will not address it. Closer should comment why.
+    color: FB3701
+  - name: I9-optimisation
+    description: An enhancement to provide better overall performance in terms of time-to-completion for a task.
+    color: c5def5
+  - name: I10-unconfirmed
+    description: Issue might be valid, but it's not yet known.
+    color: 723bf6
+  - name: I11-deprecation
+    description: The current issue/pr is, or should be, part of a deprecation process.
+    color: e0b062
+  - name: T0-node
+    description: This PR/Issue is related to the topic “node”.
+    color: fbffe0
+  - name: T1-FRAME
+    description: This PR/Issue is related to core FRAME, the framework.
+    color: F5FCE6
+  - name: T2-pallets
+    description: This PR/Issue is related to a particular pallet.
+    color: 7962d6
+  - name: T3-RPC_API
+    description: This PR/Issue is related to RPC APIs.
+    color: 635b61
+  - name: T4-runtime_API
+    description: This PR/Issue is related to runtime APIs.
+    color: 009B40
+  - name: T5-host_functions
+    description: This PR/Issue is related to host functions.
+    color: E86C7A
+  - name: T6-XCM
+    description: This PR/Issue is related to XCM.
+    color: 006b75
+  - name: T7-smart_contracts
+    description: This PR/Issue is related to smart contracts.
+    color: 0C7BAD
+  - name: T8-parachains_engineering
+    description: This PR/Issue is related to Parachains performance, stability, maintenance.
+    color: 0052cc
+  - name: T9-parachains_protocol
+    description: This PR/Issue is related to Parachains features and protocol changes.
+    color: 5319e7
+  - name: T10-polkadot
+    description: This PR/Issue is related to/affects the Polkadot network.
+    color: c90076
+  - name: T11-cumulus
+    description: This PR/Issue is related to cumulus.
+    color: 6a329f
+  - name: T12-tests
+    description: This PR/Issue is related to tests.
+    color: 6C9C98
+  - name: T13-documentation
+    description: This PR/Issue is related to documentation.
+    color: f48a75
+  - name: T14-benchmarks
+    description: This PR/Issue is related to benchmarking and weights.
+    color: 5319e7
+  - name: T15-RnD
+    description: This PR/Issue is part of technology research and development.
+    color: 5319e7
+  - name: T16-system_parachains
+    description: This PR/Issue is related to system parachains.
+    color: 0C7BAD
+  - name: T17-bridges
+    description: This PR/Issue is related to bridges.
+    color: F5FCE6
