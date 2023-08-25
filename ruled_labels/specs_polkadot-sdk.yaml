@@ -15,6 +15,9 @@ codes:
   - code: I
     name: Issues
     description: Categorisation of issues.
+  - code: R
+    name: Release
+    description: Used for creating the release notes.
   - code: T
     name: Topics
     description: PR/Issue is related to this topic.
@@ -83,6 +86,9 @@ labels:
   - name: I11-deprecation
     description: The current issue/pr is, or should be, part of a deprecation process.
     color: e0b062
+  - name: R0-silent
+    description: Changes should not be mentioned in any release notes.
+    color: #f9f0f4
   - name: T0-node
     description: This PR/Issue is related to the topic “node”.
     color: fbffe0
@@ -137,3 +143,10 @@ labels:
   - name: T17-bridges
     description: This PR/Issue is related to bridges.
     color: F5FCE6
+
+rules:
+  - name: Require at least one topic
+    id: multiple_t
+    tags:
+    spec:
+      require: !some_of [T*]
