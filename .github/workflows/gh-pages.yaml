@@ -28,7 +28,7 @@ jobs:
 
     env:
       MDBOOK_VERSION: 0.4.21 # https://github.com/rust-lang/mdBook/releases
-      TERA_VERSION: 0.2.2 # https://github.com/chevdor/tera-cli/release
+      TERA_VERSION: 0.2.4 # https://github.com/chevdor/tera-cli/release
 
     steps:
       - name: Checkout sources

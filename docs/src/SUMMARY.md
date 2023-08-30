@@ -3,7 +3,5 @@
 [Home](HOME.md)
 
 - [Respositories](#)
-  - [Polkadot](doc_polkadot.md)
-  - [Cumulus](doc_cumulus.md)
-  - [Substrate](doc_substrate.md)
+  - [Polkadot SDK](doc_polkadot-sdk.md)
 - [FAQ](faq.md)
