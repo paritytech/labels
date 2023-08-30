@@ -5,10 +5,10 @@ export COMMIT=$(git rev-parse HEAD)
 
 mkdir -p ./docs/src
 
-chains=$1
-chains=${chains:-"substrate polkadot cumulus"}
+repo=$1
+repo=${repo:-"polkadot-sdk"}
 
-for chain in $chains; do
+for chain in $repo; do
     echo "Generating doc for $chain..."
     tera --include --env --env-key env --template templates/template.md.tera ruled_labels/specs_${chain}.yaml >./docs/src/doc_${chain}.md
 done
