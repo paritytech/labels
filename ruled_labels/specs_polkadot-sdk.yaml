@@ -83,12 +83,12 @@ labels:
   - name: I10-unconfirmed
     description: Issue might be valid, but it's not yet known.
     color: 723bf6
-  - name: I11-deprecation
-    description: The current issue/pr is, or should be, part of a deprecation process.
-    color: e0b062
   - name: R0-silent
     description: Changes should not be mentioned in any release notes.
-    color: #f9f0f4
+    color: f9f0f4
+  - name: R1-breaking_change
+    description: This PR introduces a breaking change and should be highlighted in the upcoming release.
+    color: f9d0e0
   - name: T0-node
     description: This PR/Issue is related to the topic “node”.
     color: fbffe0
@@ -134,8 +134,8 @@ labels:
   - name: T14-benchmarks
     description: This PR/Issue is related to benchmarking and weights.
     color: 5319e7
-  - name: T15-RnD
-    description: This PR/Issue is part of technology research and development.
+  - name: T15-deprecation
+    description: The current issue/pr is, or should be, part of a deprecation process.
     color: 5319e7
   - name: T16-system_parachains
     description: This PR/Issue is related to system parachains.
@@ -150,3 +150,10 @@ rules:
     tags:
     spec:
       require: !some_of [T*]
+
+  - name: Allow only one difficulty label
+    id: single_d
+    tags:
+    spec:
+      when: !some_of [D*]
+      require: !one_of [D*]
