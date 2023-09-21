@@ -30,4 +30,5 @@ specs:
     filter:
       id: [ single_d ]
     labels: [ R0, D3, T10 ]
+
     expected: true
