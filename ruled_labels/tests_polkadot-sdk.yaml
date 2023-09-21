@@ -19,3 +19,15 @@ specs:
       id: [ multiple_t ]
     labels: [ A1, R0, T2, T10 ]
     expected: true
+
+  - name: Fail - Multiple difficulty labels
+    filter:
+      id: [ single_d ]
+    labels: [ A1, D0, D2, T10 ]
+    expected: false
+
+  - name: Pass - Single difficulty label
+    filter:
+      id: [ single_d ]
+    labels: [ R0, D3, T10 ]
+    expected: true
