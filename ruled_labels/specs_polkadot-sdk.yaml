@@ -157,3 +157,10 @@ rules:
     spec:
       when: !some_of [D*]
       require: !one_of [D*]
+
+  - name: Enforce R0-silent
+    id: enforce_r0
+    tags:
+    spec:
+      when: !some_of [A1]
+      require: !all_of [R0]
