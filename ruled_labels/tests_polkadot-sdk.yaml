@@ -30,5 +30,16 @@ specs:
     filter:
       id: [ single_d ]
     labels: [ R0, D3, T10 ]
+    expected: true
+  
+  - name: Pass - A1 and R0
+    filter:
+      id: [ enforce_r0 ]
+    labels: [ A1, D3, R0 ]
+    expected: true
 
+  - name: Fail - R0 missing
+    filter:
+      id: [ enforce_r0 ]
+    labels: [ A1, T9, D2 ]
     expected: true
