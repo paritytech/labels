@@ -113,34 +113,28 @@ labels:
   - name: T7-smart_contracts
     description: This PR/Issue is related to smart contracts.
     color: 0C7BAD
-  - name: T8-parachains_engineering
-    description: This PR/Issue is related to Parachains performance, stability, maintenance.
-    color: 0052cc
-  - name: T9-parachains_protocol
-    description: This PR/Issue is related to Parachains features and protocol changes.
-    color: 5319e7
-  - name: T10-polkadot
+  - name: T8-polkadot
     description: This PR/Issue is related to/affects the Polkadot network.
     color: c90076
-  - name: T11-cumulus
+  - name: T9-cumulus
     description: This PR/Issue is related to cumulus.
     color: 6a329f
-  - name: T12-tests
+  - name: T10-tests
     description: This PR/Issue is related to tests.
     color: 6C9C98
-  - name: T13-documentation
+  - name: T11-documentation
     description: This PR/Issue is related to documentation.
     color: f48a75
-  - name: T14-benchmarks
+  - name: T12-benchmarks
     description: This PR/Issue is related to benchmarking and weights.
     color: 5319e7
-  - name: T15-deprecation
+  - name: T13-deprecation
     description: The current issue/pr is, or should be, part of a deprecation process.
     color: 5319e7
-  - name: T16-system_parachains
+  - name: T14-system_parachains
     description: This PR/Issue is related to system parachains.
     color: 0C7BAD
-  - name: T17-bridges
+  - name: T15-bridges
     description: This PR/Issue is related to bridges.
     color: F5FCE6
 
