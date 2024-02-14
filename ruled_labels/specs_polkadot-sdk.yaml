@@ -38,6 +38,8 @@ labels:
   - name: C1-mentor
     description: A task where a mentor is available. Please indicate in the issue who the mentor could be.
     color: "5319e7"
+  - name: C2-good-first-issue
+    description: A task for a first time contributor to become familiar with the Polkadot-SDK.
   - name: D0-easy
     description: Can be fixed primarily by duplicating and adapting code by an intermediate coder.
     color: eeeeee
