@@ -40,6 +40,7 @@ labels:
     color: "5319e7"
   - name: C2-good-first-issue
     description: A task for a first time contributor to become familiar with the Polkadot-SDK.
+    color: 7CB9E8
   - name: D0-easy
     description: Can be fixed primarily by duplicating and adapting code by an intermediate coder.
     color: eeeeee
