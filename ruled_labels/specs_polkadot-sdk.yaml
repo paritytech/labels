@@ -140,6 +140,9 @@ labels:
   - name: T15-bridges
     description: This PR/Issue is related to bridges.
     color: F5FCE6
+  - name: T16-async_backing
+    description: Issues related to asynchronous backing.
+    color: E97042
 
 rules:
   - name: Require at least one topic
