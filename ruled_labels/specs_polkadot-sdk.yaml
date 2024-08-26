@@ -36,7 +36,7 @@ labels:
     description: Pull request is already reviewed well in another branch.
     color: F8C5E7
   - name: A4-needs-backport
-    description: Pull requests must be backported to all maintained releases.
+    description: Pull request must be backported to all maintained releases.
     color: C5DEF5
   - name: C1-mentor
     description: A task where a mentor is available. Please indicate in the issue who the mentor could be.
