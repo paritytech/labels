@@ -147,7 +147,7 @@ labels:
     description: Issues related to asynchronous backing.
     color: E97042
   - name: T17-runtime
-    description: Generic changes to runtime code.
+    description: Generic changes to runtime code that are not covered by any other label.
     color: 006b75
 
 rules:
