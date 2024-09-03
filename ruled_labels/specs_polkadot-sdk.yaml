@@ -146,8 +146,8 @@ labels:
   - name: T16-async_backing
     description: Issues related to asynchronous backing.
     color: E97042
-  - name: T17-runtime
-    description: Generic changes to runtime code that are not covered by any other label.
+  - name: T17-primitives
+    description: Changes to primitives that are not covered by any other label.
     color: 006b75
 
 rules:
