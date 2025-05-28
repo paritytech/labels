@@ -152,6 +152,9 @@ labels:
   - name: T17-primitives
     description: Changes to primitives that are not covered by any other label.
     color: 006b75
+  - name: T18-zombienet_tests
+    description: Trigger zombienet CI tests.
+    color: E84D6D
 
 rules:
   - name: Require at least one topic
