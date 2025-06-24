@@ -158,6 +158,9 @@ labels:
   - name: T18-zombienet_tests
     description: Trigger zombienet CI tests.
     color: E84D6D
+  - name: T19-skip-zombienet_tests
+    description: Skip triggering of zombienet CI tests.
+    color: BAD28F
 
 rules:
   - name: Require at least one topic
