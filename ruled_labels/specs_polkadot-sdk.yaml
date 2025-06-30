@@ -176,7 +176,7 @@ rules:
       when: !some_of [D*]
       require: !one_of [D*]
 
-  - name: Enforce R0-silent
+  - name: Enforce R0
     id: enforce_r0
     tags:
     spec:
