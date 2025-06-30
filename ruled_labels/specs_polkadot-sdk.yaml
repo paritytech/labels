@@ -95,8 +95,8 @@ labels:
   - name: I10-unconfirmed
     description: Issue might be valid, but it's not yet known.
     color: 723bf6
-  - name: R0-silent
-    description: Changes should not be mentioned in any release notes.
+  - name: R0-no-crate-publish-required
+    description: The change does not require any crates to be re-published.
     color: f9f0f4
   - name: R1-breaking_change
     description: This PR introduces a breaking change and should be highlighted in the upcoming release.
@@ -176,7 +176,7 @@ rules:
       when: !some_of [D*]
       require: !one_of [D*]
 
-  - name: Enforce R0-silent
+  - name: Enforce R0
     id: enforce_r0
     tags:
     spec:
