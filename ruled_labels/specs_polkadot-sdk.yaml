@@ -7,7 +7,7 @@ codes:
     name: Action
     description: Used with GHA and trigger a certain process.
   - code: C
-    name: Contrubution
+    name: Contribution
     description: Labels used for contributions.
   - code: D
     name: Difficulty
