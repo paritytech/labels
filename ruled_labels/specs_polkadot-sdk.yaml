@@ -36,7 +36,7 @@ labels:
     description: Pull request is already reviewed well in another branch.
     color: F8C5E7
   - name: A4-backport-stableYYMM
-    description: Pull request must be backported the relevant maintained release (e.g stable2506, stable2509, etc.).
+    description: Pull request must be backported to the relevant maintained release (e.g stable2506, stable2509, etc.).
     color: C5DEF5
   - name: A5-run-CI
     description: Run CI on draft PR
