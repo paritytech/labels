@@ -164,7 +164,9 @@ labels:
   - name: T20-governance
     description: This PR/Issue is related to governance pallets (referenda, treasury, bounties).
     color: 8B5CF6
-
+  - name: T21-staking
+    description: This PR/Issue is related to staking pallets.
+    color: F59E0B
 
 rules:
   - name: Require at least one topic
