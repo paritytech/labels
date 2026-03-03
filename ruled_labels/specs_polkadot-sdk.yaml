@@ -161,6 +161,12 @@ labels:
   - name: T19-skip-zombienet_tests
     description: Skip triggering of zombienet CI tests.
     color: BAD28F
+  - name: T20-governance
+    description: This PR/Issue is related to governance pallets (referenda, treasury, bounties, child-bounties, multi-asset-bounties).
+    color: 8B5CF6
+  - name: T21-staking
+    description: This PR/Issue is related to staking pallets (staking, nomination-pools, election-provider, etc.).
+    color: F59E0B
 
 rules:
   - name: Require at least one topic
