@@ -161,7 +161,7 @@ labels:
   - name: T19-skip-zombienet_tests
     description: Skip triggering of zombienet CI tests.
     color: BAD28F
- - name: T20-low-latency
+  - name: T20-low-latency
     description: Issues related to low latency work.
     color: 65F415
 
