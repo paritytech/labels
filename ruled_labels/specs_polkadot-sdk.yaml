@@ -41,6 +41,9 @@ labels:
   - name: A5-run-CI
     description: Run CI on draft PR
     color: C5DEF5
+  - name: A6-statement-store
+    description: Run the statement-store zombienet suite on the zombienet cluster
+    color: C5DEF5
   - name: C1-mentor
     description: A task where a mentor is available. Please indicate in the issue who the mentor could be.
     color: "5319e7"
